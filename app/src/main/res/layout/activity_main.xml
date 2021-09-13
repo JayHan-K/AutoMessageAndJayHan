@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:textColorHint="#4e4e4e"
+        android:textColor="@color/black"
+        android:scrollbars="vertical"
+        android:maxLines="10"
+        android:hint="메시지를 입력해주세요."
+        android:background="@drawable/box_border"
+        android:id="@+id/messageET"
+        android:layout_margin="10dp"
+        android:layout_weight="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </EditText>
+    <TextView
+        android:layout_marginRight="20dp"
+        android:layout_gravity="end"
+        android:text="0/140"
+        android:id="@+id/messageLengthTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <Button
+        android:id="@+id/saveBT"
+        android:text="메시지 저장"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"></Button>
+
+</LinearLayout>
